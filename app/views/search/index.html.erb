@@ -1,6 +1,7 @@
 <h1><%= @nation %></h1>
 <h3>Number of People: <%= @character_count %></h3>
 <% @characters.each do |character| %>
+<div class= "character">
   <h4>Name: <%= character.name %></h4>
   <img src= <%= character.photoUrl %></br>
   <p>Allies:</p>
@@ -24,4 +25,5 @@
     None
   <% end %>
   <p>Affiliations: <%= character.affiliation %></p>
+</div>
 <% end %>

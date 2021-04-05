@@ -25,6 +25,7 @@ RSpec.describe 'Search Page' do
               expect(div).to have_content("Enemies:")
               expect(div).to have_content("Affiliations:")
             end
+            expect(all('div.character').count).to eq(25)
           end
         end
       end

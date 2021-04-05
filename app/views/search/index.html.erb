@@ -2,6 +2,7 @@
 <h3>Number of People: <%= @character_count %></h3>
 <% @characters.each do |character| %>
   <h4>Name: <%= character.name %></h4>
+  <img src= <%= character.photoUrl %></br>
   <p>Allies:</p>
   <% if character.allies %>
   <ul>

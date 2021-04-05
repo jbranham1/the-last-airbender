@@ -14,5 +14,5 @@ class SearchFacade
       end
     end
     all_characters
-  end
+  end    
 end

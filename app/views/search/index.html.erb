@@ -1,0 +1,26 @@
+<h1><%= @nation %></h1>
+<h3>Number of People: <%= @characters.count %></h3>
+<% @characters.each do |character| %>
+  <h4>Name: <%= character.name %></h4>
+  <p>Allies:</p>
+  <% if character.allies %>
+  <ul>
+    <% character.allies.each do |allie| %>
+      <li><%= allie %></li>
+    <% end %>
+  </ul>
+  <% else %>
+    None
+  <% end %>
+  <p>Enemies:</p>
+  <% if character.enemies %>
+    <ul>
+    <% character.enemies.each do |enemy| %>
+      <li><%= enemy %></li>
+    <% end %>
+  </ul>
+  <% else %>
+    None
+  <% end %>
+  <p>Affiliations: <%= character.affiliation %></p>
+<% end %>

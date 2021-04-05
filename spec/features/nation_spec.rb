@@ -15,7 +15,7 @@ RSpec.describe 'Search Page' do
         it "Then I should see the total number of people who live in the Fire Nation. (should be close to 100)" do
           expect(current_path).to eq (search_path)
           expect(page).to have_content("Fire Nation")
-          #expect(page).to have_content("Number of People: 100")
+          expect(page).to have_content("Number of People: 97")
         end
         describe "And I should see a list with the detailed information for the first 25 members of the Fire Nation." do
           it "For each of the members I should see name, photo, allies, enemies, and affiliations" do

@@ -16,7 +16,11 @@ RSpec.describe Character do
     expect(character.id).to eq(attrs[:_id])
     expect(character.name).to eq(attrs[:name])
     expect(character.allies).to eq(attrs[:allies])
+    expect(character.allies).to be_an(Array)
+    expect(character.allies.count).to eq(1)
     expect(character.enemies).to eq(attrs[:enemies])
+    expect(character.enemies).to be_an(Array)
+    expect(character.enemies.count).to eq(2)
     expect(character.photoUrl).to eq(attrs[:photoUrl])
     expect(character.affiliation).to eq(attrs[:affiliation])
   end

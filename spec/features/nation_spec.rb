@@ -20,7 +20,7 @@ RSpec.describe 'Search Page' do
         describe "And I should see a list with the detailed information for the first 25 members of the Fire Nation." do
           it "For each of the members I should see name, photo, allies, enemies, and affiliations" do
             page.all('div.character').each do |div|
-              expect(page).to have_content("Name:")
+              expect(div).to have_content("Name:")
               expect(div).to have_content("Allies:")
               expect(div).to have_content("Enemies:")
               expect(div).to have_content("Affiliations:")

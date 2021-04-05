@@ -4,9 +4,10 @@ RSpec.describe AirbenderService do
   describe 'happy path' do
     it 'fetches characters based on a search nation' do
       nation = 'Fire Nation'
-      response = AirbenderService.search(nation)
+      response = AirbenderService.get_characters(nation)
 
       expect(response).to be_a(Array)
+      expect(response.count).to be(25)
       character = response.second
 
       expect(character).to be_a(Hash)
@@ -22,7 +23,7 @@ RSpec.describe AirbenderService do
 
     it 'doesnt fetch characters with bad search criteria' do
       nation = 'test'
-      response = AirbenderService.search(nation)
+      response = AirbenderService.get_characters(nation)
 
       expect(response).to be_a(Array)
       expect(response.count).to eq(0)

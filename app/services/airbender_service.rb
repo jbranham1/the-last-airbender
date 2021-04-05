@@ -1,6 +1,6 @@
 class AirbenderService
-  def self.search(affiliation)
-    response = connection.get("characters?affiliation=#{affiliation}")
+  def self.get_characters(affiliation, page =1)
+    response = connection.get("characters?affiliation=#{affiliation}&perPage=25&page=#{page}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
